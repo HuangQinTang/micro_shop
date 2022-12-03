@@ -41,7 +41,7 @@ func main() {
 	//micro.RegisterSubscriber("go.micro.srv.user", srv.Server(), new(subscriber.User))
 
 	// Run srv
-	if err := srv.Run(); err != nil {
+	if err = srv.Run(); err != nil {
 		log.Fatal(err)
 	}
 }
