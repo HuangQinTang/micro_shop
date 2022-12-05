@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+package go.micro.service.category;
+option go_package = "./proto/category/;go_micro_service_category";
+
+service Category {
+	rpc CreateCategory(CategoryReq) returns (CreateCategoryRes) {}
+	rpc UpdateCategory(CategoryReq) returns (UpdateCategoryRes) {}
+	rpc DeleteCategory(DeleteCategoryReq) returns (DeleteCategoryRes){}
+	rpc FindCategoryByName(FindByNameReq) returns (CategoryRes) {}
+	rpc FindCategoryByID(FindByIdReq) returns (CategoryRes){}
+	rpc FindCategoryByLevel(FindByLevelReq) returns (FindAllRes) {}
+	rpc FindCategoryByParent(FindByParentReq) returns (FindAllRes) {}
+	rpc FindAllCategory(FindAllReq) returns (FindAllRes){}
+}
+
+message CategoryReq {
+	string category_name = 1;
+	uint32 category_level = 2;
+	int64 category_parent = 3;
+	string category_image = 4;
+	string category_description = 5;
+}
+
+message CreateCategoryRes {
+	string message =1 ;
+	int64 category_id =2;
+	string trace_id = 3;
+}
+
+message UpdateCategoryRes {
+	string message = 1;
+	string trace_id = 2;
+}
+
+message DeleteCategoryReq {
+	int64 category_id =1 ;
+}
+
+message DeleteCategoryRes {
+	string message =1;
+	string trace_id = 2;
+}
+
+message FindByNameReq {
+	string category_name =1;
+}
+
+message CategoryRes {
+	int64 id = 1;
+	string category_name =2;
+	uint32 category_level = 3;
+	int64 category_parent =4;
+	string category_images =5;
+	string category_description =6;
+	string trace_id = 7;
+}
+
+message FindByIdReq {
+	int64 category_id = 1;
+}
+
+message FindByLevelReq {
+	uint32 level =1;
+}
+
+message FindByParentReq {
+	int64 parent_id =1;
+}
+
+message FindAllReq {
+
+}
+
+message FindAllRes {
+	repeated CategoryDesc category =1;
+	string trace_id = 2;
+}
+
+message CategoryDesc {
+	int64 id = 1;
+	string category_name =2;
+	uint32 category_level = 3;
+	int64 category_parent =4;
+	string category_images =5;
+	string category_description =6;
+}
+
+
+
+

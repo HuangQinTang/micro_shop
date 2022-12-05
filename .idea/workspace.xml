@@ -5,20 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a864db4-5d38-47a5-ada1-e0f368645c36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/user/common/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/common/jaeger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/common/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/main_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/user/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/domain/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/domain/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/user/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/user/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/handler/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/proto/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/proto/user/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/proto/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/user/proto/user/user.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/common/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/common/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/common/jaeger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/common/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/common/swap.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/domain/model/category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/domain/repository/category_repository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/domain/service/category_data_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/generate.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/handler/category.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/main_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/proto/category/category.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/proto/category/category.pb.micro.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/category/proto/category/category.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +66,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/go_demo/micro_shop/user/proto/user",
+    "last_opened_file_path": "D:/go_demo/micro_shop/category/common",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +76,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\go_demo\micro_shop\category\common" />
       <recent name="D:\go_demo\micro_shop\user\proto\user" />
       <recent name="D:\go_demo\micro_shop\user\common" />
     </key>
@@ -75,7 +85,16 @@
       <recent name="D:\go_demo\micro_shop\user\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_User in user">
+  <component name="RunManager" selected="Go Test.Test_Category in category">
+    <configuration name="go build category" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="micro_shop" />
+      <working_directory value="$PROJECT_DIR$/category" />
+      <kind value="PACKAGE" />
+      <package value="category" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/category/main.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="micro_shop" />
       <working_directory value="$PROJECT_DIR$/user" />
@@ -83,6 +102,17 @@
       <package value="user" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/user/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_Category in category" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="micro_shop" />
+      <working_directory value="$PROJECT_DIR$/category" />
+      <kind value="PACKAGE" />
+      <package value="category" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTest_Category\E$" />
       <method v="2" />
     </configuration>
     <configuration name="Test_User in user" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -109,8 +139,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.Test_User in user" />
+        <item itemvalue="Go Test.Test_Category in category" />
+        <item itemvalue="Go Build.go build category" />
         <item itemvalue="Go Build.go build user" />
+        <item itemvalue="Go Test.Test_User in user" />
         <item itemvalue="Go Test.Test_UserRpc in user" />
       </list>
     </recent_temporary>
