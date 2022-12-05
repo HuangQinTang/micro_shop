@@ -2,6 +2,7 @@ package handler
 
 import (
 	"context"
+	"user/common"
 	"user/domain/model"
 	"user/domain/service"
 	user "user/proto/user"
@@ -23,6 +24,7 @@ func (u *User) Register(ctx context.Context, userRegisterRequest *user.UserRegis
 		return err
 	}
 	userRegisterResponse.Message = "添加成功"
+	userRegisterResponse.TraceId = common.WithTrace(ctx)
 	return nil
 }
 
@@ -42,7 +44,9 @@ func (u *User) GetUserInfo(ctx context.Context, userInfoRequest *user.UserInfoRe
 	if err != nil {
 		return err
 	}
-	userInfoResponse = UserForResponse(userInfo)
+	//注意，UserForResponse方法里新创建了user.UserInfoRes{}对象，不能直接赋值，否则会发送值拷贝，覆盖*user.UserInfoRes地址
+	*userInfoResponse = *UserForResponse(userInfo)
+	userInfoResponse.TraceId = common.WithTrace(ctx)
 	return nil
 }
 

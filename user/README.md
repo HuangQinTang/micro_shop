@@ -35,3 +35,11 @@
    ```shell
    docker build -t user:latest .
    ```
+   
+7. 依赖
+   ```shell
+   #consul
+   docker run -d --name consul -p 8500:8500 consul:1.14.2
+   #jaeger
+   docker run -d --name=jaeger -p6831:6831/udp -p16686:16686 jaegertracing/all-in-one:latest
+   ```

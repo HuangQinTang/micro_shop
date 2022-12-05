@@ -18,6 +18,7 @@ message UserRegisterReq {
 }
 message UserRegisterRes {
   string message = 1;
+  string trace_id = 4;
 }
 
 message UserLoginReq {
@@ -26,6 +27,7 @@ message UserLoginReq {
 }
 message UserLoginRes {
   bool is_success = 1;
+  string trace_id = 4;
 }
 
 message UserInfoReq {
@@ -36,4 +38,5 @@ message UserInfoRes {
   int64 user_id = 1;
   string user_name = 2;
   string first_name = 3;
+  string trace_id = 4;
 }
