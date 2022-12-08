@@ -1,10 +1,6 @@
 package main
 
 import (
-	"HuangQinTang/micro_shop/user/domain/repository"
-	"HuangQinTang/micro_shop/user/domain/service"
-	"HuangQinTang/micro_shop/user/handler"
-	user "HuangQinTang/micro_shop/user/proto/user"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
 	_ "github.com/go-sql-driver/mysql"
@@ -15,6 +11,10 @@ import (
 	"github.com/micro/go-plugins/registry/consul/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
+	"github.com/micro_shop/user/domain/repository"
+	"github.com/micro_shop/user/domain/service"
+	"github.com/micro_shop/user/handler"
+	user "github.com/micro_shop/user/proto/user"
 	"github.com/opentracing/opentracing-go"
 )
 

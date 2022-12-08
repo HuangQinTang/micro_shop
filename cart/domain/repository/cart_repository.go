@@ -1,9 +1,9 @@
 package repository
 
 import (
-	"HuangQinTang/micro_shop/cart/domain/model"
 	"errors"
 	"github.com/jinzhu/gorm"
+	"github.com/micro_shop/cart/domain/model"
 )
 
 type ICartRepository interface {

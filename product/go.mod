@@ -1,4 +1,4 @@
-module HuangQinTang/micro_shop/product
+module github.com/micro_shop/product
 
 go 1.17
 

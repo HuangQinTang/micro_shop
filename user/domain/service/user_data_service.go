@@ -1,9 +1,9 @@
 package service
 
 import (
-	"HuangQinTang/micro_shop/user/domain/model"
-	"HuangQinTang/micro_shop/user/domain/repository"
 	"errors"
+	"github.com/micro_shop/user/domain/model"
+	"github.com/micro_shop/user/domain/repository"
 	"golang.org/x/crypto/bcrypt"
 )
 

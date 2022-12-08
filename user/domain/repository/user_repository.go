@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"HuangQinTang/micro_shop/user/domain/model"
 	"github.com/jinzhu/gorm"
+	"github.com/micro_shop/user/domain/model"
 )
 
 type IUserRepository interface {

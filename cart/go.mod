@@ -1,4 +1,4 @@
-module HuangQinTang/micro_shop/cart
+module github.com/micro_shop/cart
 
 go 1.17
 

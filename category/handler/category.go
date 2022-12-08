@@ -1,11 +1,11 @@
 package handler
 
 import (
-	"HuangQinTang/micro_shop/category/domain/model"
-	"HuangQinTang/micro_shop/category/domain/service"
-	category "HuangQinTang/micro_shop/category/proto/category"
 	"context"
 	"github.com/HuangQinTang/micro_shop/common"
+	"github.com/micro_shop/category/domain/model"
+	"github.com/micro_shop/category/domain/service"
+	category "github.com/micro_shop/category/proto/category"
 	"github.com/prometheus/common/log"
 )
 

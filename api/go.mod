@@ -1,4 +1,4 @@
-module HuangQinTang/micro_shop/api
+module github.com/micro_shop/api
 
 go 1.17
 
@@ -9,7 +9,6 @@ replace google.golang.org/grpc => google.golang.org/grpc v1.26.0
 require github.com/micro/go-micro/v2 v2.9.1
 
 require (
-    github.com/HuangQinTang/micro_shop v0.0.0-20221208132252-c50eb522dbde
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/armon/go-metrics v0.0.0-20180917152333-f0300d1749da // indirect
 	github.com/bitly/go-simplejson v0.5.0 // indirect

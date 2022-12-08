@@ -1,9 +1,6 @@
 package main
 
 import (
-	"HuangQinTang/micro_shop/category/domain/repository"
-	"HuangQinTang/micro_shop/category/domain/service"
-	"HuangQinTang/micro_shop/category/handler"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/jinzhu/gorm"
@@ -13,11 +10,14 @@ import (
 	"github.com/micro/go-plugins/registry/consul/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
+	"github.com/micro_shop/category/domain/repository"
+	"github.com/micro_shop/category/domain/service"
+	"github.com/micro_shop/category/handler"
 	"github.com/opentracing/opentracing-go"
 
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
-	category "HuangQinTang/micro_shop/category/proto/category"
+	category "github.com/micro_shop/category/proto/category"
 )
 
 const (

@@ -1,8 +1,6 @@
 package main
 
 import (
-	"HuangQinTang/micro_shop/api/proto/api"
-	go_micro_service_cart "HuangQinTang/micro_shop/api/proto/cart"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/micro/go-micro/v2"
@@ -10,6 +8,7 @@ import (
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-plugins/registry/consul/v2"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
+	go_micro_service_cart "github.com/micro_shop/api/proto/cart"
 	"github.com/opentracing/opentracing-go"
 )
 
@@ -53,5 +52,5 @@ func main() {
 
 	go_micro_service_cart.NewCartService("go.micro.service.cart", service.Client())
 
-	api.RegisterApiHandler()
+	//api.RegisterApiHandler()
 }

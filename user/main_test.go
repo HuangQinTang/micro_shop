@@ -1,7 +1,6 @@
 package main
 
 import (
-	go_micro_service_user "HuangQinTang/micro_shop/user/proto/user"
 	"context"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
@@ -9,6 +8,7 @@ import (
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-plugins/registry/consul/v2"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
+	go_micro_service_user "github.com/micro_shop/user/proto/user"
 	"github.com/opentracing/opentracing-go"
 	"testing"
 )

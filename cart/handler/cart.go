@@ -1,11 +1,11 @@
 package handler
 
 import (
-	"HuangQinTang/micro_shop/cart/domain/model"
-	"HuangQinTang/micro_shop/cart/domain/service"
-	cart "HuangQinTang/micro_shop/cart/proto/cart"
 	"context"
 	"github.com/HuangQinTang/micro_shop/common"
+	"github.com/micro_shop/cart/domain/model"
+	"github.com/micro_shop/cart/domain/service"
+	cart "github.com/micro_shop/cart/proto/cart"
 )
 
 type Cart struct {

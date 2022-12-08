@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"HuangQinTang/micro_shop/category/domain/model"
 	"github.com/jinzhu/gorm"
+	"github.com/micro_shop/category/domain/model"
 )
 
 type ICategoryRepository interface {

@@ -1,4 +1,4 @@
-module HuangQinTang/micro_shop/common
+module github.com/micro_shop/common
 
 go 1.17
 
