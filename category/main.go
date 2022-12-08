@@ -1,11 +1,11 @@
 package main
 
 import (
-	"category/common"
 	"category/domain/repository"
 	"category/domain/service"
 	"category/handler"
 	"fmt"
+	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/jinzhu/gorm"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"

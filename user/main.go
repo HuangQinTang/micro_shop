@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/HuangQinTang/micro_shop/common"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"github.com/micro/go-micro/v2"
@@ -10,7 +11,6 @@ import (
 	"github.com/micro/go-plugins/registry/consul/v2"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
 	"github.com/opentracing/opentracing-go"
-	"user/common"
 	"user/domain/repository"
 	"user/domain/service"
 	"user/handler"

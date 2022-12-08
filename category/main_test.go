@@ -1,10 +1,10 @@
 package main
 
 import (
-	"category/common"
 	go_micro_service_category "category/proto/category"
 	"context"
 	"fmt"
+	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/micro/go-micro/v2"
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-plugins/registry/consul/v2"

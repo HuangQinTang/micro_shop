@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a864db4-5d38-47a5-ada1-e0f368645c36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/jaeger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/swap.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/common/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/common/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/common/jaeger.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/common/mysql.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/common/swap.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/category/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/category/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/category/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +63,13 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\go_demo\micro_shop\common" />
       <recent name="D:\go_demo\micro_shop\category\common" />
       <recent name="D:\go_demo\micro_shop\user\proto\user" />
       <recent name="D:\go_demo\micro_shop\user\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\go_demo\micro_shop\common" />
       <recent name="D:\go_demo\micro_shop\user" />
       <recent name="D:\go_demo\micro_shop\user\test" />
     </key>

@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
+	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/jinzhu/gorm"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
-	"product/common"
 	"product/domain/repository"
 	"product/domain/service"
 	"product/handler"
