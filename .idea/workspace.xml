@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a864db4-5d38-47a5-ada1-e0f368645c36" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/api/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/api/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/jaeger.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/jaeger.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,11 +1,11 @@
-module github.com/micro_shop/common
+module github.com/HuangQinTang/micro_shop/common
 
 go 1.17
 
 require (
 	github.com/micro/go-micro/v2 v2.9.1
 	github.com/micro/go-plugins/config/source/consul/v2 v2.9.1
-	github.com/opentracing/opentracing-go v1.2.0
+	github.com/opentracing/opentracing-go v1.1.0
 	github.com/uber/jaeger-client-go v2.30.0+incompatible
 )
 
