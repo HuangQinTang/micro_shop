@@ -5,16 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a864db4-5d38-47a5-ada1-e0f368645c36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/domain/model/cart.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/domain/repository/cart_repository.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/domain/service/cart_data_service.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/generate.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/handler/cart.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/plugin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/proto/cart/cart.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/proto/cart/cart.pb.micro.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart/proto/cart/cart.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/common/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/common/config.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/common/jaeger.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/common/mysql.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/category/common/swap.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/category/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/category/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/category/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/category/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/category/handler/category.go" beforeDir="false" afterPath="$PROJECT_DIR$/category/handler/category.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/category/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/category/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/product/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/product/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/handler/product.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/handler/product.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/product/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/user/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/user/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,29 +59,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/go_demo/micro_shop/common",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/go_demo/micro_shop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\go_demo\micro_shop" />
       <recent name="D:\go_demo\micro_shop\common" />
       <recent name="D:\go_demo\micro_shop\category\common" />
       <recent name="D:\go_demo\micro_shop\user\proto\user" />
@@ -74,7 +94,7 @@
       <recent name="D:\go_demo\micro_shop\user\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.Test_Product in product">
+  <component name="RunManager" selected="Go Build.go build category">
     <configuration name="go build category" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="micro_shop" />
       <working_directory value="$PROJECT_DIR$/category" />
@@ -126,10 +146,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build category" />
         <item itemvalue="Go Test.Test_Product in product" />
         <item itemvalue="Go Build.go build product" />
         <item itemvalue="Go Test.Test_Category in category" />
-        <item itemvalue="Go Build.go build category" />
         <item itemvalue="Go Build.go build user" />
       </list>
     </recent_temporary>

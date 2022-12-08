@@ -11,6 +11,7 @@ import (
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
 	"github.com/micro/go-plugins/registry/consul/v2"
+	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
 	"github.com/opentracing/opentracing-go"
 
@@ -20,6 +21,7 @@ import (
 )
 
 const (
+	QPS = 100
 	// consul
 	consulHost   = "127.0.0.1"
 	consulPort   = int64(8500)
@@ -74,6 +76,8 @@ func main() {
 		micro.Registry(consulRegistry),
 		// 绑定链路追踪
 		micro.WrapHandler(microOpentracing.NewHandlerWrapper(opentracing.GlobalTracer())),
+		//添加限流
+		micro.WrapHandler(ratelimit.NewHandlerWrapper(QPS)),
 	)
 	srv.Init()
 

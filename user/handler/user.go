@@ -2,7 +2,7 @@ package handler
 
 import (
 	"context"
-	"user/common"
+	"github.com/HuangQinTang/micro_shop/common"
 	"user/domain/model"
 	"user/domain/service"
 	user "user/proto/user"
