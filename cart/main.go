@@ -1,10 +1,10 @@
 package main
 
 import (
-	"cart/domain/repository"
-	"cart/domain/service"
-	"cart/handler"
-	cart "cart/proto/cart"
+	"HuangQinTang/micro_shop/cart/domain/repository"
+	"HuangQinTang/micro_shop/cart/domain/service"
+	"HuangQinTang/micro_shop/cart/handler"
+	cart "HuangQinTang/micro_shop/cart/proto/cart"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/jinzhu/gorm"

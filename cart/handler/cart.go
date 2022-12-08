@@ -1,11 +1,11 @@
 package handler
 
 import (
-	"cart/domain/model"
-	"cart/domain/service"
-	cart "cart/proto/cart"
+	"HuangQinTang/micro_shop/cart/domain/model"
+	"HuangQinTang/micro_shop/cart/domain/service"
+	cart "HuangQinTang/micro_shop/cart/proto/cart"
 	"context"
-	"git.imooc.com/coding-447/common"
+	"github.com/HuangQinTang/micro_shop/common"
 )
 
 type Cart struct {

@@ -1,10 +1,10 @@
 package service
 
 import (
+	"HuangQinTang/micro_shop/user/domain/model"
+	"HuangQinTang/micro_shop/user/domain/repository"
 	"errors"
 	"golang.org/x/crypto/bcrypt"
-	"user/domain/model"
-	"user/domain/repository"
 )
 
 type IUserDataService interface {

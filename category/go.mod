@@ -1,4 +1,4 @@
-module category
+module HuangQinTang/micro_shop/category
 
 go 1.17
 

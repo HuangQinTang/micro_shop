@@ -1,6 +1,7 @@
 package main
 
 import (
+	go_micro_service_user "HuangQinTang/micro_shop/user/proto/user"
 	"context"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
@@ -10,7 +11,6 @@ import (
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
 	"github.com/opentracing/opentracing-go"
 	"testing"
-	go_micro_service_user "user/proto/user"
 )
 
 func Test_User(testing *testing.T) {

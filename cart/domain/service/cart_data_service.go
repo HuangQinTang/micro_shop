@@ -1,8 +1,8 @@
 package service
 
 import (
-	"cart/domain/model"
-	"cart/domain/repository"
+	"HuangQinTang/micro_shop/cart/domain/model"
+	"HuangQinTang/micro_shop/cart/domain/repository"
 )
 
 type ICartDataService interface {

@@ -1,8 +1,8 @@
 package repository
 
 import (
+	"HuangQinTang/micro_shop/product/domain/model"
 	"github.com/jinzhu/gorm"
-	"product/domain/model"
 )
 
 type IProductRepository interface {

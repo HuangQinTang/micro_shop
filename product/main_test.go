@@ -1,6 +1,7 @@
 package main
 
 import (
+	go_micro_service_product "HuangQinTang/micro_shop/product/proto/product"
 	"context"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
@@ -10,7 +11,6 @@ import (
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
 	"github.com/opentracing/opentracing-go"
 	"log"
-	go_micro_service_product "product/proto/product"
 	"testing"
 )
 

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"product/domain/model"
-	"product/domain/repository"
+	"HuangQinTang/micro_shop/product/domain/model"
+	"HuangQinTang/micro_shop/product/domain/repository"
 )
 
 type IProductDataService interface {

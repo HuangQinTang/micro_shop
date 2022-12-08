@@ -1,4 +1,4 @@
-module product
+module HuangQinTang/micro_shop/product
 
 go 1.17
 

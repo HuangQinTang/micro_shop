@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"category/domain/model"
+	"HuangQinTang/micro_shop/category/domain/model"
 	"github.com/jinzhu/gorm"
 )
 

@@ -1,12 +1,12 @@
 package handler
 
 import (
+	"HuangQinTang/micro_shop/product/domain/model"
+	"HuangQinTang/micro_shop/product/domain/service"
+	. "HuangQinTang/micro_shop/product/proto/product"
 	"context"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
-	"product/domain/model"
-	"product/domain/service"
-	. "product/proto/product"
 )
 
 type Product struct {

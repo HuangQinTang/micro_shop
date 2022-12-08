@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"category/domain/model"
-	"category/domain/service"
-	category "category/proto/category"
+	"HuangQinTang/micro_shop/category/domain/model"
+	"HuangQinTang/micro_shop/category/domain/service"
+	category "HuangQinTang/micro_shop/category/proto/category"
 	"context"
 	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/prometheus/common/log"

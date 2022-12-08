@@ -1,11 +1,11 @@
 package handler
 
 import (
+	"HuangQinTang/micro_shop/user/domain/model"
+	"HuangQinTang/micro_shop/user/domain/service"
+	user "HuangQinTang/micro_shop/user/proto/user"
 	"context"
 	"github.com/HuangQinTang/micro_shop/common"
-	"user/domain/model"
-	"user/domain/service"
-	user "user/proto/user"
 )
 
 type User struct {

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"category/domain/repository"
-	"category/domain/service"
-	"category/handler"
+	"HuangQinTang/micro_shop/category/domain/repository"
+	"HuangQinTang/micro_shop/category/domain/service"
+	"HuangQinTang/micro_shop/category/handler"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"
 	"github.com/jinzhu/gorm"
@@ -17,7 +17,7 @@ import (
 
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
-	category "category/proto/category"
+	category "HuangQinTang/micro_shop/category/proto/category"
 )
 
 const (

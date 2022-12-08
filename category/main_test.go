@@ -1,7 +1,7 @@
 package main
 
 import (
-	go_micro_service_category "category/proto/category"
+	go_micro_service_category "HuangQinTang/micro_shop/category/proto/category"
 	"context"
 	"fmt"
 	"github.com/HuangQinTang/micro_shop/common"

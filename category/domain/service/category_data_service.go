@@ -1,8 +1,8 @@
 package service
 
 import (
-	"category/domain/model"
-	"category/domain/repository"
+	"HuangQinTang/micro_shop/category/domain/model"
+	"HuangQinTang/micro_shop/category/domain/repository"
 )
 
 type ICategoryDataService interface {
