@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a864db4-5d38-47a5-ada1-e0f368645c36" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/common/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/config.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/jaeger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/swap.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +49,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "D:/go_demo/micro_shop/category/common",
+    "last_opened_file_path": "D:/go_demo/micro_shop/common",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
