@@ -2,21 +2,19 @@ package main
 
 import (
 	"fmt"
-	"github.com/HuangQinTang/micro_shop/common"
+	common "github.com/HuangQinTang/micro_shop_common"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
 	"github.com/micro/go-micro/v2/registry"
+	"github.com/micro/go-plugins/registry/consul/v2"
 	ratelimit "github.com/micro/go-plugins/wrapper/ratelimiter/uber/v2"
 	microOpentracing "github.com/micro/go-plugins/wrapper/trace/opentracing/v2"
 	"github.com/micro_shop/product/domain/repository"
 	"github.com/micro_shop/product/domain/service"
 	"github.com/micro_shop/product/handler"
-
-	"github.com/micro/go-plugins/registry/consul/v2"
 	"github.com/opentracing/opentracing-go"
-
-	_ "github.com/jinzhu/gorm/dialects/mysql"
 
 	product "github.com/micro_shop/product/proto/product"
 )
@@ -29,7 +27,7 @@ const (
 	consulPrefix = "/micro/config"
 	// rpc
 	productServHost = "127.0.0.1:8602"
-	productServName = "go.micro.serv.product"
+	productServName = common.ProductServName
 	// jaeger
 	traceServ = "127.0.0.1:6831"
 )

@@ -1,10 +1,12 @@
 syntax = "proto3";
 
 package go.api;
-option go_package = "./proto/;go_api";
+option go_package = "./proto/api/;go_api";
 
-service Api {
-  rpc Call(Request) returns (Response) {}
+service UserApi {
+  rpc Register(Request) returns (Response) {}
+  rpc Login(Request) returns (Response) {}
+  rpc GetUserInfo(Request) returns (Response) {}
 }
 
 message Pair {
@@ -30,6 +32,7 @@ message Response {
   int32 statusCode = 1;
   map<string, Pair> header = 2;
   string body = 3;
+  string trace_id = 4;
 }
 
 // A HTTP event as RPC

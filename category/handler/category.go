@@ -2,7 +2,7 @@ package handler
 
 import (
 	"context"
-	"github.com/HuangQinTang/micro_shop/common"
+	common "github.com/HuangQinTang/micro_shop_common"
 	"github.com/micro_shop/category/domain/model"
 	"github.com/micro_shop/category/domain/service"
 	category "github.com/micro_shop/category/proto/category"

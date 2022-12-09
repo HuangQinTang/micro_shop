@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 	"fmt"
-	"github.com/HuangQinTang/micro_shop/common"
+	common "github.com/HuangQinTang/micro_shop_common"
 	"github.com/micro_shop/product/domain/model"
 	"github.com/micro_shop/product/domain/service"
 	. "github.com/micro_shop/product/proto/product"

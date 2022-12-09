@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/HuangQinTang/micro_shop/common"
+	common "github.com/HuangQinTang/micro_shop_common"
 	"github.com/jinzhu/gorm"
 	"github.com/micro/go-micro/v2"
 	log "github.com/micro/go-micro/v2/logger"
@@ -28,7 +28,7 @@ const (
 	consulPrefix = "/micro/config"
 	// rpc
 	categoryServHost = "127.0.0.1:8601"
-	categoryServName = "go.micro.service.category"
+	categoryServName = common.CategoryServName
 	// jaeger
 	traceServ = "127.0.0.1:6831"
 )

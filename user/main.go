@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/HuangQinTang/micro_shop/common"
+	common "github.com/HuangQinTang/micro_shop_common"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"github.com/micro/go-micro/v2"
@@ -25,8 +25,8 @@ const (
 	consulPort   = int64(8500)
 	consulPrefix = "/micro/config"
 	// rpc
-	userServHost = "127.0.0.1:8600"
-	userServName = "go.micro.srv.user"
+	userServHost = "127.0.0.1:8666"
+	userServName = common.UserServName
 	// jaeger
 	traceServ = "127.0.0.1:6831"
 )
@@ -35,7 +35,7 @@ func main() {
 	// 配置中心
 	consulConfig, err := common.GetConsulConfig(consulHost, consulPort, consulPrefix)
 	if err != nil {
-		panic("连接配置中心失败")
+		panic("连接配置中心失败" + err.Error())
 	}
 
 	//获取数据库配置
@@ -74,6 +74,7 @@ func main() {
 		micro.WrapHandler(microOpentracing.NewHandlerWrapper(opentracing.GlobalTracer())),
 		//添加限流
 		micro.WrapHandler(ratelimit.NewHandlerWrapper(QPS)),
+		micro.Metadata(map[string]string{"protocol": "http"}),
 	)
 	// 服务初始化
 	srv.Init()

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package go.micro.api.haha;
+
+import "proto/imports/api.proto";
+
+service Haha {
+	rpc Call(go.api.Request) returns (go.api.Response) {}
+}

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/HuangQinTang/micro_shop/common"
+	common "github.com/HuangQinTang/micro_shop_common"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"github.com/micro/go-micro/v2"
@@ -25,7 +25,7 @@ const (
 	consulPrefix = "/micro/config"
 	// rpc
 	cartServHost = "127.0.0.1:8601"
-	cartServName = "go.micro.service.cart"
+	cartServName = common.CartServName
 	// jaeger
 	traceServ = "127.0.0.1:6831"
 	QPS       = 100

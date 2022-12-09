@@ -3,17 +3,101 @@ package handler
 import (
 	"context"
 	"encoding/json"
+	"errors"
+	common "github.com/HuangQinTang/micro_shop_common"
 	log "github.com/micro/go-micro/v2/logger"
-
-	"HuangQinTang/micro_shop/api/client"
-	api "github.com/micro/go-micro/v2/api/proto"
-	"github.com/micro/go-micro/v2/errors"
-	api "path/to/service/proto/api"
+	"github.com/micro_shop/api/proto/api"
+	userServ "github.com/micro_shop/api/proto/user"
 )
 
-type Api struct{}
+type UserApi struct {
+	UserService userServ.UserService
+}
 
-func extractValue(pair *api.Pair) string {
+// Register userapi/register
+func (u *UserApi) Register(ctx context.Context, req *go_api.Request, res *go_api.Response) error {
+	log.Info("路径:【", req.Path, "】 请求方式：【", req.Method, "】 请求头:【", req.Header, "】 请求参数:【", req.Post, "】")
+
+	userName, firstName, pwd := extractValue(req.Post["user_name"]), extractValue(req.Post["first_name"]), extractValue(req.Post["pwd"])
+	if userName == "" {
+		return errors.New("user_name 不能为空")
+	}
+	if pwd == "" {
+		return errors.New("pwd 不能为空")
+	}
+
+	resp, err := u.UserService.Register(context.Background(), &userServ.UserRegisterReq{
+		UserName:  userName,
+		FirstName: firstName,
+		Pwd:       pwd,
+	})
+	if err != nil {
+		return err
+	}
+	respByte, err := json.Marshal(resp)
+	if err != nil {
+		return err
+	}
+
+	res.StatusCode = 200
+	res.TraceId = common.WithTrace(ctx)
+	res.Body = string(respByte)
+	return nil
+}
+
+func (u *UserApi) Login(ctx context.Context, req *go_api.Request, res *go_api.Response) error {
+	log.Info("路径:【", req.Path, "】 请求方式：【", req.Method, "】 请求头:【", req.Header, "】 请求参数:【", req.Post, "】")
+
+	userName, pwd := extractValue(req.Post["user_name"]), extractValue(req.Post["pwd"])
+	if userName == "" {
+		return errors.New("user_name 不能为空")
+	}
+	if pwd == "" {
+		return errors.New("pwd 不能为空")
+	}
+
+	resp, err := u.UserService.Login(context.Background(), &userServ.UserLoginReq{
+		UserName: userName,
+		Pwd:      pwd,
+	})
+	if err != nil {
+		return err
+	}
+	respByte, err := json.Marshal(resp)
+	if err != nil {
+		return err
+	}
+
+	res.StatusCode = 200
+	res.TraceId = common.WithTrace(ctx)
+	res.Body = string(respByte)
+	return nil
+}
+
+func (u *UserApi) GetUserInfo(ctx context.Context, req *go_api.Request, res *go_api.Response) error {
+	log.Info("路径:【", req.Path, "】 请求方式：【", req.Method, "】 请求头:【", req.Header, "】 请求参数:【", req.Post, "】")
+
+	userName := extractValue(req.Get["user_name"])
+	if userName == "" {
+		return errors.New("user_name 不能为空")
+	}
+
+	resp, err := u.UserService.GetUserInfo(context.Background(), &userServ.UserInfoReq{UserName: userName})
+	if err != nil {
+		return err
+	}
+	respByte, err := json.Marshal(resp)
+	if err != nil {
+		return err
+	}
+
+	res.StatusCode = 200
+	res.TraceId = common.WithTrace(ctx)
+	res.Body = string(respByte)
+	return nil
+}
+
+func extractValue(pair *go_api.Pair) string {
 	if pair == nil {
 		return ""
 	}
@@ -21,30 +105,4 @@ func extractValue(pair *api.Pair) string {
 		return ""
 	}
 	return pair.Values[0]
-}
-
-// Api.Call is called by the API as /api/call with post body {"name": "foo"}
-func (e *Api) Call(ctx context.Context, req *api.Request, rsp *api.Response) error {
-	log.Info("Received Api.Call request")
-
-	// extract the client from the context
-	apiClient, ok := client.ApiFromContext(ctx)
-	if !ok {
-		return errors.InternalServerError("go.micro.api.api.api.call", "api client not found")
-	}
-
-	// make request
-	response, err := apiClient.Call(ctx, &api.Request{
-		Name: extractValue(req.Post["name"]),
-	})
-	if err != nil {
-		return errors.InternalServerError("go.micro.api.api.api.call", err.Error())
-	}
-
-	b, _ := json.Marshal(response)
-
-	rsp.StatusCode = 200
-	rsp.Body = string(b)
-
-	return nil
 }
